@@ -1,0 +1,59 @@
+You're a system administrator responsible for managing a server hosting a website. Your tasks include managing files, directories, permissions, and monitoring system resources.
+
+Commands and Short Notes:
+1. ls
+Usage: ls [options] [file/directory]
+Short Note: Lists files and directories in the current directory.
+Example: ls -l
+2. cd
+Usage: cd [directory]
+Short Note: Changes the current directory.
+Example: cd /var/www/html
+3. mkdir
+Usage: mkdir [directory]
+Short Note: Creates a new directory.
+Example: mkdir images
+4. touch
+Usage: touch [file]
+Short Note: Creates an empty file or updates the timestamp of an existing file.
+Example: touch index.html
+5. cp
+Usage: cp [source] [destination]
+Short Note: Copies files or directories.
+Example: cp index.html index_backup.html
+6. mv
+Usage: mv [source] [destination]
+Short Note: Moves or renames files or directories.
+Example: mv index.html public_html/index.html
+7. rm
+Usage: rm [file]
+Short Note: Removes files or directories.
+Example: rm index_backup.html
+8. chmod
+Usage: chmod [mode] [file/directory]
+Short Note: Changes the permissions of files or directories.
+Example: chmod 755 script.sh
+9. chown
+Usage: chown [user:group] [file/directory]
+Short Note: Changes the owner and group of files or directories.
+Example: chown user:group index.html
+10. grep
+Usage: grep [pattern] [file]
+Short Note: Searches for a pattern in files.
+Example: grep "error" logfile.txt
+11. ps
+Usage: ps [options]
+Short Note: Displays information about processes running on the system.
+Example: ps aux
+12. top
+Usage: top
+Short Note: Displays dynamic real-time information about system resources and processes.
+Example: top
+13. df
+Usage: df [options]
+Short Note: Displays information about disk space usage.
+Example: df -h
+14. du
+Usage: du [options] [directory]
+Short Note: Displays disk usage of files and directories.
+Example: du -sh /var/www
