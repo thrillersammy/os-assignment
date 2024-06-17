@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+// Function to calculate the total page faults using RLU algorithm
+int pageFaultsRLU(int n, int c, int pages[])
+{
+    int count = 0;
+    vector<int> v; // Cache to simulate the order of item usage
+    int i;
+    for (i = 0; i <= n - 1; i++) {
+        auto it = find(v.begin(), v.end(), pages[i]); // Check if page is in cache
+        if (it == v.end()) { // Page not found (cache miss)
+            if (v.size() == c) { // Cache is full
+                v.pop_back(); // Remove the most recently used page
+            }
+            v.push_back(pages[i]); // Add the new page to the cache
+            count++; // Increment page fault count
+        }
+        else { // Page found in cache (cache hit)
+            v.erase(it); // Remove the page from its current position in the cache
+            v.push_back(pages[i]); // Add the page to the end of the cache (most recently used)
+        }
+    }
+     
+    // Return total page faults
+    return count;
+}
+
+int main()
+{
+    int pages[] = { 1, 2, 1, 4, 2, 3, 5 };
+    int n = 7, c = 3;
+ 
+    cout << "Page Faults (LRU) = " << pageFaults(n, c, pages) << endl;
+    cout << "Page Faults (RLU) = " << pageFaultsRLU(n, c, pages) << endl;
+    return 0;
+}
